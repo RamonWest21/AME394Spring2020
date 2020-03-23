@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{6F6DAD85-2CE8-963A-8FBF-CF0183A46BCF}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Population.cs">
+    <Files>
+      <File FileName="Assets/BallScript.cs" Line="50" Column="57" />
+      <File FileName="Assets/Population.cs" Line="11" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
