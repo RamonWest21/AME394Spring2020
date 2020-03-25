@@ -17,9 +17,9 @@ public class Population : MonoBehaviour
         persons = new BallScript[numPersons];
 
         for (int i = 0; i < numPersons; i++){
-            Vector3 position = new Vector3(1, 0, 1);
+            Vector3 position = new Vector3(1, -0.3f, 1);
             while(Physics.OverlapSphere(position, personPrefab.transform.localScale.x/2).Length > 0){
-                position = new Vector3(Random.value * 20, 0.5f, Random.value * 20);
+                position = new Vector3(Random.value * 20, 0, Random.value * 20);
             }
             GameObject personClone = Instantiate(personPrefab, position, Quaternion.identity);
             persons[i] = personClone.GetComponent<BallScript>();
