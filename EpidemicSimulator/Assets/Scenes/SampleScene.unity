@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numPersons: 300
   numInfected: 2
-  numFrozen: 0
+  numFrozen: 150
   personPrefab: {fileID: 1975228815}
 --- !u!1 &1511830507
 GameObject:

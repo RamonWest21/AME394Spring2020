@@ -16,11 +16,12 @@ public class Population : MonoBehaviour
     {
         persons = new BallScript[numPersons];
 
-        for (int i = 0; i < numPersons; i++){
+        for (int i = 0; i < numPersons; i++)
+        {
             Vector3 position = new Vector3(1, -0.3f, 1);
             while(Physics.OverlapSphere(position, personPrefab.transform.localScale.x/2).Length > 0){
                 position = new Vector3(Random.value * 20, 0, Random.value * 20);
-            }
+                }
             GameObject personClone = Instantiate(personPrefab, position, Quaternion.identity);
             persons[i] = personClone.GetComponent<BallScript>();
 
@@ -31,6 +32,14 @@ public class Population : MonoBehaviour
             else {
                 persons[i].healthy = true;
                 persons[i].infected = false;
+
+                if (i < numInfected + numFrozen)
+                {
+                    persons[i].frozen = true;
+                }
+                else {
+                    persons[i].frozen = false;
+                }
             }
         }
 

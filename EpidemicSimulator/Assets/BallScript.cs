@@ -50,16 +50,21 @@ public class BallScript : MonoBehaviour
             meshFilter.mesh.vertices = spikyVertices;
             timeToRecover -= Time.deltaTime;
 
-            if (timeToRecover <= 0) {
+            if (timeToRecover <= 0) 
+            {
                 infected = false;
             }
-
         }
+
 
         else {
             meshRenderer.material.color = new Color(0.3f, 1, 0.3f);
             meshFilter.mesh.vertices = originalVertices;
 
+        }
+
+        if (frozen) {
+            rbody.velocity = Vector3.zero;
         }
     }
 
@@ -70,6 +75,7 @@ public class BallScript : MonoBehaviour
         transform.forward = newVector.normalized;
 
         BallScript collisionBallScript = collision.gameObject.GetComponent<BallScript>();
+
         if (collisionBallScript.infected && this.healthy){
             healthy = false;
             infected = true;
